@@ -5,7 +5,7 @@ import { baseRoutes } from './routerPath'
 import formatUserRouter from '@/router/formatUserRouter'
 
 // 添加参数，避免多次循环导致的错误
-var getUseRouters
+var getUseRouters = null
 
 // 合并当前所有的路由
 const newRouters = (to: any, next: any) => {
@@ -30,7 +30,7 @@ const getUserLoginRouter = (callRes, callErr) => {
 
 // 路由跳转之前
 router.beforeEach((to, from, next) => {
-  if (!getUseRouters) {
+  if (!getUseRouters && getUseRouters === null) {
     getUseRouters = []
     getUserLoginRouter((res: any) => {
       getUseRouters = res
@@ -42,6 +42,7 @@ router.beforeEach((to, from, next) => {
   }
 
   /* if (to.path !== '/login' && !localStorage.getItem('token')) {
+    getUseRouters = null
     next({
       path: '/login'
     })
