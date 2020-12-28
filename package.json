@@ -1,0 +1,58 @@
+{
+  "name": "vue-dynamic-router",
+  "projectName": "动态路由、按钮权限",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "npm run serve",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "babel-polyfill": "^6.26.0",
+    "core-js": "^3.4.3",
+    "oidc-client": "^1.10.1",
+    "vue": "^2.6.10",
+    "vue-class-component": "^7.0.2",
+    "vue-property-decorator": "^8.3.0",
+    "vue-router": "^3.1.3",
+    "vuex": "^3.1.2",
+    "vuex-module-decorators": "^0.11.0"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.10.1",
+    "@vue/cli-plugin-babel": "^4.1.0",
+    "@vue/cli-plugin-eslint": "^4.1.0",
+    "@vue/cli-plugin-router": "^4.1.0",
+    "@vue/cli-plugin-typescript": "^4.1.0",
+    "@vue/cli-plugin-unit-jest": "^4.1.0",
+    "@vue/cli-plugin-vuex": "^4.1.0",
+    "@vue/cli-service": "^4.1.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "@vue/eslint-config-typescript": "^4.0.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "less": "^3.12.2",
+    "less-loader": "^7.1.0",
+    "lint-staged": "^9.4.3",
+    "miniprogram-api-typings": "^2.9.3",
+    "postcss-pxtorem": "^5.1.1",
+    "style-loader": "^1.2.1",
+    "timi-tools": "^1.0.0",
+    "typescript": "~3.5.3",
+    "vue-template-compiler": "^2.6.10",
+    "webpack-bundle-analyzer": "^3.8.0",
+    "webpack-theme-color-replacer": "^1.2.17"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,vue,ts}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  }
+}
