@@ -1,11 +1,11 @@
 <template>
-  <div class="layout index">
+  <div class="layout child">
     <div class="layout-left">
       <router-list />
     </div>
     <div class="layout-right">
       <h4>
-        【index】这里是公用的头部
+        【child】这里是公用部分
       </h4>
       <main class="layout-box">
         <router-view />
@@ -18,11 +18,11 @@
 import { Component, Vue } from 'vue-property-decorator'
 import RouterList from '@/frameSkeleton/layout/components/routerList.vue'
 
-  @Component<Index>({
-    name: 'Index',
+  @Component<Child>({
+    name: 'Child',
     components: { RouterList }
   })
-export default class Index extends Vue {
+export default class Child extends Vue {
 
 }
 </script>
@@ -46,8 +46,8 @@ export default class Index extends Vue {
       h4 {
         font-size: 20px;
         line-height: 60px;
-        color: aqua;
-        border-bottom: 1px solid aqua;
+        color: #55a532;
+        border-bottom: 1px solid #55a532;
       }
     }
   }

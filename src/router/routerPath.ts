@@ -1,7 +1,5 @@
 import { RouteConfig } from 'vue-router'
 
-import Index from '@/frameSkeleton/layout/index.vue'
-
 // 基础页面路由
 export const baseRoutes: RouteConfig[] = [
   {
@@ -50,6 +48,7 @@ export const baseRoutes: RouteConfig[] = [
 ]
 
 // 大屏端页面路由
+/*
 export const indexRoutes: RouteConfig[] = [
   {
     path: '/indexRoutes',
@@ -76,3 +75,4 @@ export const indexRoutes: RouteConfig[] = [
     }]
   }
 ]
+*/

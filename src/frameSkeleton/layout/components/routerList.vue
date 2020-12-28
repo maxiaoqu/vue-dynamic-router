@@ -36,7 +36,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import { baseRoutes, indexRoutes } from '@/router/routerPath'
+import { AppModule } from '@/store/modules/app'
 
 @Component<RouterList>({
   name: 'RouterList'
@@ -49,7 +49,7 @@ export default class RouterList extends Vue {
   }
 
   private getRouterList() {
-    let routerList = baseRoutes.concat(indexRoutes)
+    let routerList = AppModule.getUserRouter
     this.routerList = routerList
   }
 

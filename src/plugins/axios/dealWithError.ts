@@ -5,13 +5,13 @@
  */
 const dealWithError = (err) => {
   let errorMessage: any = Object.create(null)
-  let requestMessage = err.request
-  let responseMessage = err.response
+  let requestMessage: any = err.request
+  let responseMessage: any = err.response
   // console.log(222, requestMessage, responseMessage)
-  errorMessage.success = requestMessage.withCredentials || false
-  errorMessage.statusText = responseMessage.statusText
-  errorMessage.date = responseMessage.headers.date
-  let status = responseMessage.status
+  errorMessage.success = (requestMessage && requestMessage.withCredentials) || false
+  errorMessage.statusText = (requestMessage && responseMessage.statusText)
+  errorMessage.date = (requestMessage && responseMessage.headers.date)
+  let status = (requestMessage && responseMessage.status)
   switch (status) {
     case 400:
       errorMessage.message = '请求错误'

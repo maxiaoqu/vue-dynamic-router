@@ -1,0 +1,196 @@
+[
+  {
+    "path": "/renwuguanli",
+    "name": "renwuguanli",
+    "component": "Index",
+    "redirect": "/renwuguanli/nianduxunshi",
+    "meta": {
+      "title": "任务管理",
+      "icon": "ios-folder-open",
+      "hideInMenu": true,
+      "notCache": true
+    },
+    "children": [
+      {
+        "path": "nianduxunshi",
+        "name": "nianduxunshi",
+        "component": "/renwuguanli/nianduxunshi.vue",
+        "meta": {
+          "title": "年度巡视",
+          "icon": "ios-funnel",
+          "hideInMenu": true,
+          "notCache": true
+        },
+        "bottom": [
+          {
+            "icon": "md-add",
+            "menuName": "新增",
+            "component": "addModalClick",
+            "menuOrder": "0",
+            "model": "editModalFlag"
+          },
+          {
+            "icon": "ios-create-outline",
+            "menuName": "修改",
+            "component": "updateModal",
+            "menuOrder": "5",
+            "model": "editModalFlag"
+          },
+          {
+            "icon": "ios-trash-outline",
+            "menuName": "删除",
+            "component": "delClick",
+            "menuOrder": "10",
+            "model": "delFlag"
+          }
+        ]
+      },
+      {
+        "path": "yueduxunshi",
+        "name": "yueduxunshi",
+        "component": "/renwuguanli/yueduxunshi.vue",
+        "meta": {
+          "title": "月度巡视",
+          "icon": "md-leaf",
+          "hideInMenu": true,
+          "notCache": true
+        },
+        "bottom": [
+          {
+            "icon": "md-add",
+            "menuName": "新增",
+            "component": "addModalClick",
+            "menuOrder": "0",
+            "model": "editModalFlag"
+          },
+          {
+            "icon": "ios-create-outline",
+            "menuName": "修改",
+            "component": "updateModal",
+            "menuOrder": "5",
+            "model": "editModalFlag"
+          },
+          {
+            "icon": "ios-trash-outline",
+            "menuName": "删除",
+            "component": "delClick",
+            "menuOrder": "10",
+            "model": "delFlag"
+          }
+        ]
+      },
+      {
+        "path": "baodianzhishou",
+        "name": "baodianzhishou",
+        "component": "/renwuguanli/baodianzhishou.vue",
+        "meta": {
+          "title": "定点值守",
+          "icon": "md-medal",
+          "hideInMenu": true,
+          "notCache": true
+        },
+        "bottom": [
+          {
+            "icon": "md-add",
+            "menuName": "新增",
+            "component": "addModalClick",
+            "menuOrder": "0",
+            "model": "editModalFlag"
+          },
+          {
+            "icon": "ios-create-outline",
+            "menuName": "修改",
+            "component": "updateModal",
+            "menuOrder": "5",
+            "model": "editModalFlag"
+          }
+        ],
+        "children": []
+      }
+    ]
+  },
+  {
+    "path": "/shebeitaizhang",
+    "name": "shebeitaizhang",
+    "component": "Child",
+    "redirect": "/shebeitaizhang/gantacaishu",
+    "meta": {
+      "title": "设备台账",
+      "icon": "md-bookmarks",
+      "hideInMenu": true,
+      "notCache": true
+    },
+    "children": [
+      {
+        "path": "gantacaishu",
+        "name": "gantacaishu",
+        "component": "/shebeitaizhang/gantacaishu.vue",
+        "meta": {
+          "title": "杆塔参数",
+          "icon": "md-cog",
+          "hideInMenu": true,
+          "notCache": true
+        },
+        "bottom": [
+          {
+            "icon": "md-add",
+            "menuName": "新增",
+            "component": "addModalClick",
+            "menuOrder": "0",
+            "model": "editModalFlag"
+          },
+          {
+            "icon": "ios-create-outline",
+            "menuName": "修改",
+            "component": "updateModal",
+            "menuOrder": "5",
+            "model": "editModalFlag"
+          },
+          {
+            "icon": "ios-trash-outline",
+            "menuName": "删除",
+            "component": "delClick",
+            "menuOrder": "10",
+            "model": "delFlag"
+          }
+        ],
+        "children": []
+      },
+      {
+        "path": "gantataizhang",
+        "name": "gantataizhang",
+        "component": "/shebeitaizhang/gantataizhang.vue",
+        "meta": {
+          "title": "杆塔台账",
+          "icon": "logo-codepen",
+          "hideInMenu": true,
+          "notCache": true
+        },
+        "bottom": [
+          {
+            "icon": "md-add",
+            "menuName": "新增",
+            "component": "addModalClick",
+            "menuOrder": "0",
+            "model": "editModalFlag"
+          },
+          {
+            "icon": "ios-create-outline",
+            "menuName": "修改",
+            "component": "updateModal",
+            "menuOrder": "5",
+            "model": "editModalFlag"
+          },
+          {
+            "icon": "ios-trash-outline",
+            "menuName": "删除",
+            "component": "delClick",
+            "menuOrder": "10",
+            "model": "delFlag"
+          }
+        ],
+        "children": []
+      }
+    ]
+  }
+]

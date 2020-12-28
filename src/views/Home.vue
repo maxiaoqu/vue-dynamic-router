@@ -23,7 +23,7 @@ export default class Home extends Vue {
 
   private gotoHome() {
     this.$router.push({
-      name: 'indexRoutes'
+      name: 'renwuguanli'
     })
   }
 }

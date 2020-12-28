@@ -2,7 +2,7 @@ import { VuexModule, Module, Mutation, Action, getModule } from 'vuex-module-dec
 import store from '@/store'
 
 export interface AppState {
-  size: string
+  userRouter: any[]
 }
 
 /*
@@ -16,23 +16,23 @@ export interface AppState {
 
 class App extends VuexModule implements AppState {
   // state
-  public size = 'large' || 'medium'
+  public userRouter = []
 
   // get
-  get getSize() {
-    return this.size
+  get getUserRouter() {
+    return this.userRouter
   }
 
   // mutations
   @Mutation
-  private SET_SIZE(size: string) {
-    this.size = size
+  private SET_USRROUTR(userRouter: any[]) {
+    this.userRouter = userRouter
   }
 
   // actions
   @Action
-  public setSize(size: string) {
-    this.SET_SIZE(size)
+  public setUserRouter(userRouter: any[]) {
+    this.SET_USRROUTR(userRouter)
   }
 }
 
